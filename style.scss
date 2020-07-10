@@ -1,0 +1,303 @@
+$textdark: #434848;
+//$bgcolor: lighten(#fda894, 10%);
+$bgcolor: #363732;
+$widgetbgcolour: #eeeef4;
+$boxshadow: darken(#f0f0f0, 0%);
+$font: "Roboto", sans-serif;
+
+:active,
+:focus {
+  outline: none;
+  border: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+html {
+  height: 101%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $textdark;
+  background-color: $bgcolor;
+  padding: 0px !important;
+}
+
+.container-lg {
+  border-radius: 15px 15px 15px 0;
+  margin: 50px auto;
+  //box-shadow: 0px 0px 8px 5px darken(#f0f0f0, 10%);
+  @media screen and (max-width: 992px) {
+    margin: auto !important;
+  }
+}
+
+.container-lg > .row {
+  padding: 0;
+}
+
+.row {
+  margin-left: 0 !important;
+}
+
+#main {
+  background-color: $widgetbgcolour;
+  border-radius: 15px 0 0 0;
+  max-width: 100%;
+  @media screen and (max-width: 992px) {
+    border-radius: 0;
+  }
+}
+
+#sidebar {
+  height: 100%;
+  background-color: white;
+  border-radius: 0 15px 15px 0;
+}
+
+.nopad {
+  padding: 0;
+}
+
+#navBar {
+  line-height: 40px;
+  max-height: 80px;
+  padding: 20px 35px;
+  border-radius: 15px 0 0 0;
+  @media screen and (max-width: 992px) {
+    border-radius: 0;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+input.search {
+  height: 35px;
+  padding: 5px 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-top: 3px;
+}
+
+.nav {
+  color: #a3aab9;
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 0;
+
+  .navItem {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    a {
+      color: #a3aab9;
+
+      &:hover {
+        color: darken(#a3aab9, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .navActive {
+    color: $textdark;
+
+    a {
+      color: $textdark;
+
+      &:hover {
+        color: $textdark;
+      }
+    }
+  }
+}
+
+#mainContent {
+  padding: 0 35px 35px;
+  height: 100%;
+  @media screen and (max-width: 992px) {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 60px;
+  }
+}
+
+#sidebar {
+  padding: 30px 10px;
+  width: 100%;
+  @media screen and (max-width: 992px) {
+    border-radius: 0;
+  }
+}
+
+#breakdownHead {
+  height: 80px;
+  box-sizing: border-box;
+  line-height: 80px;
+  margin: 0 0 15px;
+}
+
+.filterBudget {
+  select {
+    width: 100%;
+    height: 55%;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px 0 darken(#f0f0f0, 0%);
+  }
+}
+
+.budgetChart {
+  background-color: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 0 0 5px 0 darken(#f0f0f0, 10%);
+  border: 1px solid #f0f0f0;
+  display: inline-flex;
+
+  .graph {
+    padding: 15px;
+  }
+}
+
+#pageTitle {
+  color: $textdark;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.btn {
+  width: 100%;
+  z-index: 999;
+  position: relative;
+  outline: none;
+  border: none;
+  box-shadow: inset 0 0 0 1px #f0f0f0;
+  border-radius: 5px;
+  padding: 11px 5px;
+  background: white;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 0 1px #f0f0f0;
+    background-color: white;
+    color: $textdark;
+  }
+}
+
+.dropdownFilterMenu {
+  width: 100%;
+  position: relative;
+  z-index: 990;
+  top: -19px;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+
+  .dropdownItem {
+    height: 25%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin: 0;
+    line-height: 16px;
+    font-size: 16px;
+    margin-top: -100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 11px 5px 11px 15px;
+    font-size: 14.4px;
+    font-family: $font;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($textdark, 70%);
+    }
+  }
+}
+
+#dropdownMenuButton {
+  text-align: left;
+  font-family: $font;
+  padding-left: 15px;
+  font-size: 14.4px;
+
+  &:after {
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+}
+
+.chartContainer {
+  padding: 20px 0;
+  float: left;
+  #leftBudgetChart {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.budgetChart {
+  .graph {
+    &:first-child {
+      border-right: 1px dotted darken(#f0f0f0, 10%);
+    }
+
+    &:nth-child(2) {
+      padding: 15px 0;
+      margin-left: 15px;
+    }
+  }
+}
+
+.chartData {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  float: left;
+  padding: 20px 15px 20px 15px;
+  margin: auto;
+}
+
+input.dial {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: default;
+}
+
+.savingsGoal, .totalSavings {
+  font-size: 1.5em;
+  padding: 7px;
+  box-sizing: border-box;
+  min-height: 25px;
+  width: 50%;
+}

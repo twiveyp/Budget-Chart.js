@@ -1,0 +1,235 @@
+:active,
+:focus {
+  outline: none;
+  border: none; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */ }
+
+html {
+  height: 101%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #434848;
+  background-color: #363732;
+  padding: 0px !important; }
+
+.container-lg {
+  border-radius: 15px 15px 15px 0;
+  margin: 50px auto; }
+  @media screen and (max-width: 992px) {
+    .container-lg {
+      margin: auto !important; } }
+
+.container-lg > .row {
+  padding: 0; }
+
+.row {
+  margin-left: 0 !important; }
+
+#main {
+  background-color: #eeeef4;
+  border-radius: 15px 0 0 0;
+  max-width: 100%; }
+  @media screen and (max-width: 992px) {
+    #main {
+      border-radius: 0; } }
+
+#sidebar {
+  height: 100%;
+  background-color: white;
+  border-radius: 0 15px 15px 0; }
+
+.nopad {
+  padding: 0; }
+
+#navBar {
+  line-height: 40px;
+  max-height: 80px;
+  padding: 20px 35px;
+  border-radius: 15px 0 0 0; }
+  @media screen and (max-width: 992px) {
+    #navBar {
+      border-radius: 0; } }
+  #navBar .logo {
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center; }
+
+input.search {
+  height: 35px;
+  padding: 5px 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-top: 3px; }
+
+.nav {
+  color: #a3aab9;
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 0; }
+  .nav .navItem {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .nav .navItem a {
+      color: #a3aab9; }
+      .nav .navItem a:hover {
+        color: #868fa3;
+        text-decoration: none; }
+  .nav .navActive {
+    color: #434848; }
+    .nav .navActive a {
+      color: #434848; }
+      .nav .navActive a:hover {
+        color: #434848; }
+
+#mainContent {
+  padding: 0 35px 35px;
+  height: 100%; }
+  @media screen and (max-width: 992px) {
+    #mainContent {
+      margin-top: 20px; } }
+  @media screen and (max-width: 576px) {
+    #mainContent {
+      margin-top: 60px; } }
+
+#sidebar {
+  padding: 30px 10px;
+  width: 100%; }
+  @media screen and (max-width: 992px) {
+    #sidebar {
+      border-radius: 0; } }
+
+#breakdownHead {
+  height: 80px;
+  box-sizing: border-box;
+  line-height: 80px;
+  margin: 0 0 15px; }
+
+.filterBudget select {
+  width: 100%;
+  height: 55%;
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px 0 #f0f0f0; }
+
+.budgetChart {
+  background-color: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 0 0 5px 0 #d7d7d7;
+  border: 1px solid #f0f0f0;
+  display: inline-flex; }
+  .budgetChart .graph {
+    padding: 15px; }
+
+#pageTitle {
+  color: #434848;
+  font-size: 1.6em;
+  font-weight: 400; }
+
+.btn {
+  width: 100%;
+  z-index: 999;
+  position: relative;
+  outline: none;
+  border: none;
+  box-shadow: inset 0 0 0 1px #f0f0f0;
+  border-radius: 5px;
+  padding: 11px 5px;
+  background: white; }
+  .btn:active, .btn:focus, .btn:hover {
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 0 1px #f0f0f0;
+    background-color: white;
+    color: #434848; }
+
+.dropdownFilterMenu {
+  width: 100%;
+  position: relative;
+  z-index: 990;
+  top: -19px;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden; }
+  .dropdownFilterMenu .dropdownItem {
+    height: 25%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin: 0;
+    line-height: 16px;
+    font-size: 16px;
+    margin-top: -100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 11px 5px 11px 15px;
+    font-size: 14.4px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer; }
+    .dropdownFilterMenu .dropdownItem:hover {
+      background-color: #f8f8f8; }
+
+#dropdownMenuButton {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  padding-left: 15px;
+  font-size: 14.4px; }
+  #dropdownMenuButton:after {
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px; }
+
+.chartContainer {
+  padding: 20px 0;
+  float: left; }
+  .chartContainer #leftBudgetChart {
+    max-width: 300px;
+    margin: 0 auto; }
+
+.budgetChart .graph:first-child {
+  border-right: 1px dotted #d7d7d7; }
+.budgetChart .graph:nth-child(2) {
+  padding: 15px 0;
+  margin-left: 15px; }
+
+.chartData {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  float: left;
+  padding: 20px 15px 20px 15px;
+  margin: auto; }
+
+input.dial {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: default; }
+
+.savingsGoal, .totalSavings {
+  font-size: 1.5em;
+  padding: 7px;
+  box-sizing: border-box;
+  min-height: 25px;
+  width: 50%; }
+
+/*# sourceMappingURL=style.css.map */

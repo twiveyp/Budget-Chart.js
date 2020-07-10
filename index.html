@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="/knob.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.3/umd/popper.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <!-- Recreation of https://dribbble.com/shots/7253457-Budget-Web-Application-Design/attachments/220057?mode=media -->
+  <div class="container-lg nopad">
+    <div class="row col-12">
+      <div class="col-lg-9 nopad">
+        <div id="main" class="row">
+          <div id="navBar" class="row col-lg-12 noselect">
+            <div class="logo col-lg-2">myBudget</div>
+            <div class="navSearch col-sm-3">
+              <input class="search" type="text" placeholder="Search" />
+            </div>
+            <div class="nav col-sm-7">
+              <div class="navItem col-3 navActive"><a href="#">Overview</a></div>
+              <div class="navItem col-3"><a href="#">Finance</a></div>
+              <div class="navItem col-3"><a href="#">Calendar</a></div>
+              <div class="navItem col-3"><a href="#">Events</a></div>
+            </div>
+          </div>
+          <div id="mainContent" class="row col-lg-12">
+            <div class="col-12">
+              <div class="row" id="breakdownHead" class="nopad">
+                <div id="pageTitle" class="col-9 nopad">
+                  Home Wallet
+                </div>
+                <div class="filterBudget col-3 nopad">
+                  <div class="filterDropdown noselect">
+                    <button class="btn dropdown-toggle" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">One</button>
+                    <div class="dropdownFilterMenu">
+                      <div class="dropdownItem">One</div>
+                      <div class="dropdownItem">Two</div>
+                      <div class="dropdownItem">Three</div>
+                      <div class="dropdownItem">Four</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 nopad budgetChart">
+                  <div class="col-lg-8 nopad graph">
+                    <div class="chartContainer col-lg-6">
+                      <canvas id="leftBudgetChart" style="position: relative !important; width: 100% !important; height: 100% !important;" width="100%" height="100%"></canvas>
+                    </div>
+                    <div class="col-lg-6 chartData">
+                      <form>
+                        <label>Savings Goal</label>
+                        <input type="text" class="savingsGoal"/>
+                        <label>Saving Total</label>
+                        <input type="text" class="totalSavings"/>
+                      </form>
+                      <input type="text" value="100" class="dial noselect"/>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 nopad graph">
+                    <div class="chartContainer">
+                      <canvas id="myChart" style="position: relative !important; width: 100% !important; height: 100% !important;" width="100%" height="100%"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 nopad">
+        <div id="sidebar" class="row">
+          <div class="col-12">
+            Sidebar
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
