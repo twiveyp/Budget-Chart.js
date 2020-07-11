@@ -67,6 +67,10 @@ body {
     font-weight: 800;
     font-size: 20px;
     text-align: center; }
+    @media screen and (max-width: 992px) {
+      #navBar .logo {
+        font-size: 40px;
+        padding-bottom: 10px; } }
 
 input.search {
   height: 35px;
@@ -207,8 +211,7 @@ input.search {
 .budgetChart .graph:first-child {
   border-right: 1px dotted #d7d7d7; }
 .budgetChart .graph:nth-child(2) {
-  padding: 15px 0;
-  margin-left: 15px; }
+  padding: 15px; }
 
 .chartData {
   position: relative;

@@ -47,7 +47,7 @@ async function getJSON() {
       'height': 150,
       'displayInput': true, // true of false
       'bgColor': '#f0f0f0',
-      'readOnly': true, // true or false
+      'readOnly': false, // true or false
       'font': '"Roboto", sans-serif'
     });
   }
@@ -148,3 +148,15 @@ async function chartIt() {
     }
   });
 }
+
+/*
+$(window).resize(function() {
+  console.log(window.innerWidth);
+  if (window.innerWidth <= 700) {
+
+  }
+  else {
+
+  }
+});
+*/
